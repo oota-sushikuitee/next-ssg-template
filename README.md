@@ -51,6 +51,19 @@ the contents of `out/` to your static host of choice.
 | `yarn lint:fix` | Run ESLint with `--fix`               |
 | `yarn format`   | Run Prettier across `app/**/*.{ts,tsx}` |
 
+## SEO defaults
+
+The template ships with basic SEO scaffolding:
+
+- `app/config.ts` — `siteUrl`, `siteName`, and `siteDescription` used by
+  everything below. **Edit this first** when starting a new site.
+- `app/layout.tsx` — `metadataBase`, title template, canonical URL, Open
+  Graph, and Twitter card metadata derived from the config.
+- `app/robots.ts` / `app/sitemap.ts` — emit `robots.txt` and `sitemap.xml` at
+  build time (`force-static` is required because of `output: 'export'`).
+
+After deploying, submit `sitemap.xml` to Google Search Console.
+
 ## License
 
 See [LICENSE](LICENSE).
