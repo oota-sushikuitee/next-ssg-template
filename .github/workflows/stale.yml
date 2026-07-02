@@ -5,11 +5,19 @@ on:
     - cron: '30 1 * * *'
   workflow_dispatch:
 
+permissions:
+  issues: write
+  pull-requests: write
+
 jobs:
   stale:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/stale@v10
+      - uses: actions/stale@eb5cf3af3ac0a1aa4c9c45633dd1ae542a27a899 # v10.3.0
         with:
-          stale-issue-message: 'Message to comment on stale issues. If none provided, will not mark issues stale'
-          stale-pr-message: 'Message to comment on stale PRs. If none provided, will not mark PRs stale'
+          days-before-stale: 60
+          days-before-close: 7
+          stale-issue-message: 'This issue has been inactive for 60 days and is marked as stale. It will be closed in 7 days if there is no further activity.'
+          close-issue-message: 'This issue was closed because it remained stale for 7 days with no further activity.'
+          stale-pr-message: 'This pull request has been inactive for 60 days and is marked as stale. It will be closed in 7 days if there is no further activity.'
+          close-pr-message: 'This pull request was closed because it remained stale for 7 days with no further activity.'
