@@ -28,7 +28,7 @@ area/configurations:
             '.prettierignore',
             '.prettierrc',
             '.yarnrc.yml',
-            '.eslint.config.*',
+            'eslint.config.*',
             'next.config.*',
             'tsconfig.json',
             'tailwind.config.*',
