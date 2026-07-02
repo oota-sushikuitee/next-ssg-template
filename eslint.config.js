@@ -1,15 +1,25 @@
 // eslint.config.js
-import { ESLint } from 'eslint';
+import { dirname } from 'node:path';
+import { fileURLToPath } from 'node:url';
 
-const config = new ESLint({
-  baseConfig: {
-    extends: [
-      'next',
-      'next/core-web-vitals',
-      'plugin:@typescript-eslint/recommended',
-      'prettier',
-    ],
-    plugins: ['@typescript-eslint', 'prettier'],
+import { FlatCompat } from '@eslint/eslintrc';
+import prettierRecommended from 'eslint-plugin-prettier/recommended';
+import tseslint from 'typescript-eslint';
+
+// eslint-config-next v15 ships a legacy (eslintrc) config, so it is loaded
+// through FlatCompat as documented for Next.js 15 flat config setups.
+const compat = new FlatCompat({
+  baseDirectory: dirname(fileURLToPath(import.meta.url)),
+});
+
+export default tseslint.config(
+  {
+    ignores: ['node_modules/', '.next/', 'out/'],
+  },
+  ...compat.extends('next/core-web-vitals'),
+  ...tseslint.configs.recommended,
+  prettierRecommended,
+  {
     rules: {
       'prettier/prettier': 'error',
       '@typescript-eslint/explicit-function-return-type': 'off',
@@ -20,8 +30,5 @@ const config = new ESLint({
         { argsIgnorePattern: '^_' },
       ],
     },
-  },
-  ignorePatterns: ['node_modules/', '.next/', 'out/'],
-});
-
-export default config;
+  }
+);
