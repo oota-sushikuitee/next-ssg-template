@@ -6,6 +6,13 @@ on:
       - '.github/renovate.json'
   workflow_dispatch:
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
 jobs:
   validate:
     runs-on: ubuntu-latest
@@ -15,4 +22,4 @@ jobs:
         uses: actions/checkout@v6
 
       - name: validate renovate.json
-        run: npx --package=renovate -c renovate-config-validator
+        run: npx --package=renovate@43.250.0 -c renovate-config-validator
