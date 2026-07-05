@@ -1,22 +1,16 @@
 // eslint.config.js
-import { dirname } from 'node:path';
-import { fileURLToPath } from 'node:url';
-
-import { FlatCompat } from '@eslint/eslintrc';
+import nextCoreWebVitals from 'eslint-config-next/core-web-vitals';
 import prettierRecommended from 'eslint-plugin-prettier/recommended';
 import tseslint from 'typescript-eslint';
 
-// eslint-config-next v15 ships a legacy (eslintrc) config, so it is loaded
-// through FlatCompat as documented for Next.js 15 flat config setups.
-const compat = new FlatCompat({
-  baseDirectory: dirname(fileURLToPath(import.meta.url)),
-});
-
+// eslint-config-next v16 ships a native flat config, so it is imported
+// directly instead of being bridged through FlatCompat (which was needed
+// for the v15 legacy-eslintrc-format config).
 export default tseslint.config(
   {
     ignores: ['node_modules/', '.next/', 'out/'],
   },
-  ...compat.extends('next/core-web-vitals'),
+  ...nextCoreWebVitals,
   ...tseslint.configs.recommended,
   prettierRecommended,
   {
