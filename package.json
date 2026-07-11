@@ -9,7 +9,7 @@
     "start": "next start",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "format": "prettier --write \"app/**/*.{ts,tsx}\""
+    "format": "prettier --write \"**/*.{ts,tsx,js,cjs,mjs,json,md,css}\""
   },
   "dependencies": {
     "next": "16.2.10",
