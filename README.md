@@ -2,7 +2,7 @@
 
 [![License](https://img.shields.io/github/license/oota-sushikuitee/next-ssg-template)](https://github.com/oota-sushikuitee/next-ssg-template/blob/main/LICENSE)
 
-A minimal Next.js 15 + TypeScript + Tailwind CSS template configured for
+A minimal Next.js 16 + TypeScript + Tailwind CSS template configured for
 static site generation. `next build` emits a static `out/` directory that can
 be served by any static host (GitHub Pages, Cloudflare Pages, S3, Netlify).
 
