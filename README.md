@@ -43,13 +43,13 @@ the contents of `out/` to your static host of choice.
 
 ## Scripts
 
-| Script          | What it does                          |
-| --------------- | ------------------------------------- |
-| `yarn dev`      | Start the dev server                  |
-| `yarn build`    | Build static export into `out/`       |
-| `yarn lint`     | Run ESLint                            |
-| `yarn lint:fix` | Run ESLint with `--fix`               |
-| `yarn format`   | Run Prettier across `app/**/*.{ts,tsx}` |
+| Script          | What it does                                  |
+| --------------- | --------------------------------------------- |
+| `yarn dev`      | Start the dev server                          |
+| `yarn build`    | Build static export into `out/`               |
+| `yarn lint`     | Run ESLint                                    |
+| `yarn lint:fix` | Run ESLint with `--fix`                       |
+| `yarn format`   | Run Prettier across app and root config files |
 
 ## SEO defaults
 

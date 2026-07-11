@@ -1,29 +1,19 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "github>oota-sushikuitee/renovate-config"
-  ],
+  "extends": ["github>oota-sushikuitee/renovate-config"],
   "packageRules": [
     {
       "allowedVersions": "/^([0-9]*[02468])\\./",
       "groupName": "Node.js dependencies",
-      "matchPackageNames": [
-        "node",
-        "@types/node"
-      ]
+      "matchPackageNames": ["node", "@types/node"]
     },
     {
       "groupName": "@types dependencies",
-      "matchPackageNames": [
-        "/^@types//"
-      ]
+      "matchPackageNames": ["/^@types//"]
     },
     {
       "groupName": "linting dependencies",
-      "matchPackageNames": [
-        "/^eslint/",
-        "/^prettier/"
-      ]
+      "matchPackageNames": ["/^eslint/", "/^prettier/"]
     }
   ]
 }

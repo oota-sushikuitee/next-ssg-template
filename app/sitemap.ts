@@ -6,9 +6,10 @@ export const dynamic = 'force-static';
 
 const sitemap = (): MetadataRoute.Sitemap => [
   {
-    // List every indexable page here with the date its content last changed.
+    // List every indexable page here. `lastModified` is intentionally omitted:
+    // `new Date()` would churn the sitemap on every build. Add a real date per
+    // entry (e.g. from your CMS or content frontmatter) when you have one.
     url: `${siteUrl}/`,
-    lastModified: new Date(),
   },
 ];
 
