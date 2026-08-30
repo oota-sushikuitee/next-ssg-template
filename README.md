@@ -36,10 +36,21 @@ yarn dev        # http://localhost:3000
 
 ```bash
 yarn build      # produces ./out
+yarn preview    # serve ./out at http://localhost:3000
 ```
+
+`yarn preview` runs `npx serve@latest out`, so it needs no extra dependency.
+Use it to check the built site before deploying — `next start` does not work
+with `output: 'export'`.
 
 The output is fully static — no Node runtime is required to serve it. Upload
 the contents of `out/` to your static host of choice.
+
+`trailingSlash: true` is set in `next.config.mjs` so every route exports as
+`<route>/index.html` instead of a flat `<route>.html`. That is what makes the
+export work on hosts without clean-URL rewrite rules (S3 website endpoints,
+plain object storage). `images.unoptimized` is set for the same reason: the
+default `next/image` loader needs a server, so a static export cannot use it.
 
 ## Scripts
 
@@ -47,6 +58,7 @@ the contents of `out/` to your static host of choice.
 | --------------- | --------------------------------------------- |
 | `yarn dev`      | Start the dev server                          |
 | `yarn build`    | Build static export into `out/`               |
+| `yarn preview`  | Serve the built `out/` locally                |
 | `yarn lint`     | Run ESLint                                    |
 | `yarn lint:fix` | Run ESLint with `--fix`                       |
 | `yarn format`   | Run Prettier across app and root config files |
