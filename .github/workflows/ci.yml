@@ -5,8 +5,10 @@ on:
     branches: [main]
   pull_request:
 
+# Cancel superseded PR runs (grouped by head_ref). Push runs fall back to
+# run_id, so main runs are never cancelled by a later push.
 concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
+  group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
   cancel-in-progress: true
 
 permissions:
