@@ -25,10 +25,8 @@ area/configurations:
           [
             '.gitignore',
             '.node-version',
-            '.prettierignore',
-            '.prettierrc',
             '.yarnrc.yml',
-            'eslint.config.*',
+            'biome.json',
             'next.config.*',
             'tsconfig.json',
             'tailwind.config.*',

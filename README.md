@@ -59,9 +59,9 @@ default `next/image` loader needs a server, so a static export cannot use it.
 | `yarn dev`      | Start the dev server                          |
 | `yarn build`    | Build static export into `out/`               |
 | `yarn preview`  | Serve the built `out/` locally                |
-| `yarn lint`     | Run ESLint                                    |
-| `yarn lint:fix` | Run ESLint with `--fix`                       |
-| `yarn format`   | Run Prettier across app and root config files |
+| `yarn lint`     | Run Biome's linter and formatter checks       |
+| `yarn lint:fix` | Run Biome checks and apply safe fixes         |
+| `yarn format`   | Run Biome's formatter across the repo         |
 
 ## SEO defaults
 

@@ -1,4 +1,4 @@
-name: ESLint
+name: Lint
 
 on:
   pull_request:
@@ -26,5 +26,5 @@ jobs:
         run: |
           yarn install --immutable
 
-      - name: Run ESLint
-        run: yarn lint
+      - name: Run Biome
+        run: yarn biome ci .
