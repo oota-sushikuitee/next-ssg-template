@@ -1,39 +1,39 @@
 area/app:
   - changed-files:
-      - any-glob-to-any-file: 'app/**'
+      - any-glob-to-any-file: "app/**"
 
 area/testing:
   - changed-files:
-      - any-glob-to-any-file: 'tests/**'
+      - any-glob-to-any-file: "tests/**"
       - any-glob-to-any-file:
           [
-            '**/*.test.js',
-            '**/*.spec.js',
-            '**/*.test.ts',
-            '**/*.spec.ts',
-            '**/*.test.tsx',
-            '**/*.spec.tsx',
+            "**/*.test.js",
+            "**/*.spec.js",
+            "**/*.test.ts",
+            "**/*.spec.ts",
+            "**/*.test.tsx",
+            "**/*.spec.tsx",
           ]
 
 area/github-management:
   - changed-files:
-      - any-glob-to-any-file: '.github/**'
+      - any-glob-to-any-file: ".github/**"
 
 area/configurations:
   - changed-files:
       - any-glob-to-any-file:
           [
-            '.gitignore',
-            '.node-version',
-            '.yarnrc.yml',
-            'biome.json',
-            'next.config.*',
-            'tsconfig.json',
-            'tailwind.config.*',
-            'package.json',
+            ".gitignore",
+            ".node-version",
+            ".yarnrc.yml",
+            "biome.json",
+            "next.config.*",
+            "tsconfig.json",
+            "tailwind.config.*",
+            "package.json",
           ]
 
 area/documentation:
   - changed-files:
-      - any-glob-to-any-file: 'docs/**'
-      - any-glob-to-any-file: '*.md'
+      - any-glob-to-any-file: "docs/**"
+      - any-glob-to-any-file: "*.md"

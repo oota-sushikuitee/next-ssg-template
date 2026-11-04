@@ -54,14 +54,14 @@ default `next/image` loader needs a server, so a static export cannot use it.
 
 ## Scripts
 
-| Script          | What it does                                  |
-| --------------- | --------------------------------------------- |
-| `yarn dev`      | Start the dev server                          |
-| `yarn build`    | Build static export into `out/`               |
-| `yarn preview`  | Serve the built `out/` locally                |
-| `yarn lint`     | Run Biome's linter and formatter checks       |
-| `yarn lint:fix` | Run Biome checks and apply safe fixes         |
-| `yarn format`   | Run Biome's formatter across the repo         |
+| Script          | What it does                            |
+| --------------- | --------------------------------------- |
+| `yarn dev`      | Start the dev server                    |
+| `yarn build`    | Build static export into `out/`         |
+| `yarn preview`  | Serve the built `out/` locally          |
+| `yarn lint`     | Run Biome's linter and formatter checks |
+| `yarn lint:fix` | Run Biome checks and apply safe fixes   |
+| `yarn format`   | Run Biome's formatter across the repo   |
 
 ## SEO defaults
 
