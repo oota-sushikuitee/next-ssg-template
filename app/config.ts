@@ -8,4 +8,4 @@ export const siteDescription =
 // Trailing slashes are stripped once here so every consumer can append a path
 // (`${siteUrl}/sitemap.xml`) without emitting a double slash, and so the URLs
 // in robots.txt and sitemap.xml match the `metadataBase` in app/layout.tsx.
-export const siteUrl = configuredSiteUrl.replace(/\/+$/, "");
+export const siteUrl = configuredSiteUrl.replace(/\/+$/u, "");
