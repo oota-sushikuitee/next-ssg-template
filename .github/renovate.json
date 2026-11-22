@@ -4,6 +4,17 @@
 		"github>oota-sushikuitee/renovate-config",
 		"customManagers:githubActionsVersions"
 	],
+	"customManagers": [
+		{
+			"customType": "regex",
+			"description": "Update tools pinned in package.json scripts as npx <package>@<version>",
+			"managerFilePatterns": ["/^package\\.json$/"],
+			"matchStrings": [
+				"npx (?<depName>(?:@[\\w.-]+/)?[\\w.-]+)@(?<currentValue>\\d[^\\s\"]*)"
+			],
+			"datasourceTemplate": "npm"
+		}
+	],
 	"packageRules": [
 		{
 			"allowedVersions": "/^([0-9]*[02468])\\./",
