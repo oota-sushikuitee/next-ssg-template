@@ -28,8 +28,8 @@ area/configurations:
             ".yarnrc.yml",
             "biome.jsonc",
             "next.config.*",
+            "postcss.config.*",
             "tsconfig.json",
-            "tailwind.config.*",
             "package.json",
           ]
 
