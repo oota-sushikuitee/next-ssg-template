@@ -1,6 +1,9 @@
 {
 	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
-	"extends": ["github>oota-sushikuitee/renovate-config"],
+	"extends": [
+		"github>oota-sushikuitee/renovate-config",
+		"customManagers:githubActionsVersions"
+	],
 	"packageRules": [
 		{
 			"allowedVersions": "/^([0-9]*[02468])\\./",
