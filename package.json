@@ -7,7 +7,7 @@
 		"dev": "next dev",
 		"build": "next build",
 		"preview": "npx serve@14.2.7 out",
-		"lint": "biome ci --error-on-warnings .",
+		"lint": "sh scripts/lint.sh ci .",
 		"lint:fix": "biome check --write .",
 		"format": "biome format --write ."
 	},
