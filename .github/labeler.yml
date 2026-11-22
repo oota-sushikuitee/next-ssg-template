@@ -26,7 +26,7 @@ area/configurations:
             ".gitignore",
             ".node-version",
             ".yarnrc.yml",
-            "biome.json",
+            "biome.jsonc",
             "next.config.*",
             "tsconfig.json",
             "tailwind.config.*",
