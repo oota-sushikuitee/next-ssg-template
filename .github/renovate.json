@@ -22,6 +22,11 @@
 			"matchPackageNames": ["node", "@types/node"]
 		},
 		{
+			"allowedVersions": "<25",
+			"description": "Keep @types/node on the Node.js major in .node-version; raise together with it",
+			"matchPackageNames": ["@types/node"]
+		},
+		{
 			"groupName": "@types dependencies",
 			"matchPackageNames": ["/^@types//"]
 		},
