@@ -39,7 +39,8 @@ yarn build      # produces ./out
 yarn preview    # serve ./out at http://localhost:3000
 ```
 
-`yarn preview` runs `npx serve@latest out`, so it needs no extra dependency.
+`yarn preview` runs a pinned [`serve`](https://github.com/vercel/serve) through
+`npx`, so it needs no extra dependency.
 Use it to check the built site before deploying — `next start` does not work
 with `output: 'export'`.
 
